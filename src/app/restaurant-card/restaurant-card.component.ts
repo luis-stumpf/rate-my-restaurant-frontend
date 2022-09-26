@@ -10,6 +10,7 @@ export class RestaurantCardComponent implements OnInit {
 
   @Input() name: string;
   @Input() type: string;
+  @Input() rating: number;
 
   constructor() { }
 

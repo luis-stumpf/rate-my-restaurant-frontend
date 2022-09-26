@@ -19,6 +19,7 @@ export class Restaurant {
   id: string;
   name: string;
   type: string;
+  rating: number;
   menu?: (Menu[]) | null;
 }
 
