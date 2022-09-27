@@ -13,10 +13,14 @@ import { RouterModule, Routes } from "@angular/router";
 import * as path from "path";
 import { RestaurantViewComponent } from './restaurant-view/restaurant-view.component';
 import { DishComponent } from './dish/dish.component';
+import { RestaurantCreateComponent } from './restaurant-create/restaurant-create.component';
+import { DishCreateComponent } from './dish-create/dish-create.component';
 
 const routes: Routes = [
   { path: 'restaurant/:id', component: RestaurantViewComponent},
-  { path: '', component: FeedComponent}
+  { path: '', component: FeedComponent},
+  { path: 'create', component: RestaurantCreateComponent},
+  { path: 'addDish', component: DishCreateComponent}
 ]
 
 @NgModule({
@@ -26,7 +30,9 @@ const routes: Routes = [
     RestaurantCardComponent,
     FeedComponent,
     RestaurantViewComponent,
-    DishComponent
+    DishComponent,
+    RestaurantCreateComponent,
+    DishCreateComponent
   ],
   imports: [
     BrowserModule,

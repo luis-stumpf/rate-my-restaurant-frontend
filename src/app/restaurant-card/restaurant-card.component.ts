@@ -15,6 +15,7 @@ export class RestaurantCardComponent implements OnInit {
   @Input() type: string;
   @Input() rating: number;
   @Input() id: string;
+  @Input() image: string
   nums: number[] = [1, 2, 3, 4, 5, 6, 7]
   @Input() restaurant: Restaurant
 

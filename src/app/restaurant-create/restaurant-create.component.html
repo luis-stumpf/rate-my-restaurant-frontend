@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <input #Name name="Name" type="text" placeholder="Name">
+    <input #Type name="Type" type="text" placeholder="Type">
+    <input #Picture name="Picture" type="file">
+  </div>
+  <div>
+    <br>
+    <app-dish-create></app-dish-create>
+  </div>
+
+  <button (click)="submitRest(Name.value, Type.value, Picture.files[0])">Submit</button>
+</div>
