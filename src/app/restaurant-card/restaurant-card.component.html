@@ -1,10 +1,11 @@
 <div class="card">
-  <img src="assets/img/1.jpg">
+  <a [routerLink]="['/restaurant', id]">
+      <img src="assets/img/2.jpg">
 
-  <div class="content">
-    <h4>{{ name }}</h4>
-    <p>{{ type }}</p>
-    <p><mat-icon>star</mat-icon>{{ rating }}</p>
-
-  </div>
+      <div class="content ">
+        <h4>{{ name }}</h4>
+        <p>{{ type }}</p>
+        <p><mat-icon>star</mat-icon>{{ rating }}</p>
+      </div>
+  </a>
 </div>

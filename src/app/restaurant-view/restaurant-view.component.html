@@ -1,0 +1,15 @@
+<div class="restaurant-view">
+  <img src="assets/img/3.jpg">
+  <div class="restaurant-info">
+      <h2>{{ restaurant.name }}</h2>
+      <p><mat-icon>star</mat-icon>{{ restaurant.rating }}</p>
+    <p>{{ restaurant.type }}</p>
+  </div>
+    <div class="menu">
+      <app-dish
+        *ngFor="let menu of restaurant.menu"
+        [dish]="menu">
+
+      </app-dish>
+    </div>
+</div>

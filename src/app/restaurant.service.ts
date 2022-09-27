@@ -8,7 +8,7 @@ export class RestaurantService {
   constructor() { }
 }
 
-export class Menu {
+export class Dish {
   id: string;
   name: string;
   price: number;
@@ -20,6 +20,6 @@ export class Restaurant {
   name: string;
   type: string;
   rating: number;
-  menu?: (Menu[]) | null;
+  menu?: (Dish[]) | null;
 }
 

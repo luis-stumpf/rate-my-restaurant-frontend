@@ -1,8 +1,10 @@
-<app-restaurant-card
-  *ngFor="let restaurant of restaurants"
-  [name]="restaurant.name"
-  [type]="restaurant.type"
-  [rating]="restaurant.rating">
+<div class="grid-container">
+    <app-restaurant-card
+      *ngFor="let restaurant of restaurants"
+      [name]="restaurant.name"
+      [type]="restaurant.type"
+      [rating]="restaurant.rating"
+      [id]="restaurant.id">
 
-
-</app-restaurant-card>
+    </app-restaurant-card>
+</div>

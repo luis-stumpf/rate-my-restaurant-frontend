@@ -10,12 +10,14 @@ import {HttpClient} from "@angular/common/http";
 export class FeedComponent implements OnInit {
 
   @Input() restaurants: Restaurant[]
+  @Input() restaurant: Restaurant
 
   constructor(private client: HttpClient) { }
 
   ngOnInit(): void {
     this.client.get('http://localhost:8080/api/restaurants')
       .subscribe((data: Restaurant[]) => this.restaurants = data)
+
   }
 
 }
