@@ -15,12 +15,13 @@ import { RestaurantViewComponent } from './restaurant-view/restaurant-view.compo
 import { DishComponent } from './dish/dish.component';
 import { RestaurantCreateComponent } from './restaurant-create/restaurant-create.component';
 import { DishCreateComponent } from './dish-create/dish-create.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   { path: 'restaurant/:id', component: RestaurantViewComponent},
   { path: '', component: FeedComponent},
   { path: 'create', component: RestaurantCreateComponent},
-  { path: 'addDish', component: DishCreateComponent}
+  { path: 'addDish/:id', component: DishCreateComponent}
 ]
 
 @NgModule({
@@ -40,7 +41,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

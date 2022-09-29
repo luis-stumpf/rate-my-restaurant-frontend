@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {handleUpload, Restaurant} from "../restaurant.service";
 import {Observable, Subscriber} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-restaurant-create',
@@ -13,7 +14,7 @@ export class RestaurantCreateComponent implements OnInit {
   result: Restaurant
   pictureBin: Observable<any>
 
-  constructor(private client: HttpClient) { }
+  constructor(private client: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,10 +29,11 @@ export class RestaurantCreateComponent implements OnInit {
 
     this.convertToBase64(picture)
     this.pictureBin.subscribe((d) =>{
-      let json  = {
+      let json = {
         name: name,
         type: type,
-        image: d.toString()
+        image: d.toString(),
+        menu: []
       }
       this.result = Object.assign(new Restaurant(), json)
       this.client.post('http://localhost:8080/api/create', this.result)
@@ -39,6 +41,8 @@ export class RestaurantCreateComponent implements OnInit {
           console.log(res)
         })
     })
+    this.router.navigate(['/'])
+
 
   }
 

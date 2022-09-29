@@ -1,15 +1,15 @@
 <div class="restaurant-view">
   <img src="{{ restaurant.image }}">
   <div class="restaurant-info">
-      <h2>{{ restaurant.name }}</h2>
-      <p><mat-icon>star</mat-icon>{{ restaurant.rating }}</p>
-    <p>{{ restaurant.type }}</p>
+      <h1>{{ restaurant.name }}</h1>
+    <h4>{{ restaurant.type }}</h4>
   </div>
     <div class="menu">
+      <h3>Menu:</h3>
       <app-dish
         *ngFor="let menu of restaurant.menu"
         [dish]="menu">
-
       </app-dish>
+      <a [routerLink]="['/addDish', restaurant.id]" class="addButton"><mat-icon>add</mat-icon></a>
     </div>
 </div>

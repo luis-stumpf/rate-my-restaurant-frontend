@@ -1,13 +1,11 @@
-<div>
+<div class="restaurant-create">
   <div>
-    <input #Name name="Name" type="text" placeholder="Name">
-    <input #Type name="Type" type="text" placeholder="Type">
-    <input #Picture name="Picture" type="file">
-  </div>
-  <div>
+    <input class="form-control" #Name name="Name" type="text" placeholder="Name">
+    <input class="form-control" #Type name="Type" type="text" placeholder="Type">
     <br>
-    <app-dish-create></app-dish-create>
+    <input class="form-control" #Picture name="Picture" type="file">
   </div>
-
-  <button (click)="submitRest(Name.value, Type.value, Picture.files[0])">Submit</button>
+  <div>
+    <button class="btn btn-dark" (click)="submitRest(Name.value, Type.value, Picture.files[0])">Submit</button>
+  </div>
 </div>
